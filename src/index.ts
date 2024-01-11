@@ -25,11 +25,24 @@ router.all('/', async (request, env, context) => {
 
 	// Now get the subject of our request
 	let subject: any;
-	if (request.query.url) {
-		subject = request.query.url;
+	if (request.method == "GET") {
+		if (request.query.url) {
+			subject = request.query.url;
+		}
+		else {
+			return new Response('Missing query in ?url=', { status: 400 })
+		}
 	}
-	else {
-		return new Response('Missing query in ?url=', { status: 400 })
+
+	if (request.method == "POST") {
+		let formData = await request.formData();
+		if (formData.get('url')) {
+			subject = formData.get('url');
+		}
+		else {
+			return new Response('Missing url in formData', { status: 400 })
+		}
+
 	}
 
 	// Now, we figure out what they want to do
