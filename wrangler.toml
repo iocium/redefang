@@ -1,0 +1,8 @@
+name = "redefang"
+main = "src/index.ts"
+compatibility_date = "2023-12-18"
+account_id = "b0e6b19da3df3101d8e5f1f95fa3dcb7"
+routes = [
+    { pattern = "re.fangthis.zone/*", zone_name = "fangthis.zone" },
+    { pattern = "de.fangthis.zone/*", zone_name = "fangthis.zone" }
+]

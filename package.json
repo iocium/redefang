@@ -1,0 +1,19 @@
+{
+  "name": "redefang",
+  "version": "2024.1.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "fanger": "^0.3.1",
+    "itty-router": "^4.0.27"
+  }
+}
