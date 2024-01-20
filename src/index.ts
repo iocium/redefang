@@ -50,7 +50,11 @@ router.all('/', async (request, env, context) => {
 	if (hostname.includes('de.fang')) resp = defang(subject)
 	if (hostname.includes('re.fang')) resp = refang(subject)
 
-	return new Response(resp, { headers: { 'Content-Type': 'text/plain' }})
+	return new Response(resp, {
+		headers: {
+			'Content-Type': 'text/plain'
+		}
+	})
 });
 
 router.all("*", () => new Response("404, not found!", { status: 404 }))
