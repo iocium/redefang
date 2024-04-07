@@ -8,12 +8,12 @@
     "start": "wrangler dev"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240320.1",
-    "typescript": "^5.4.3",
-    "wrangler": "^3.41.0"
+    "@cloudflare/workers-types": "^4.20240405.0",
+    "typescript": "^5.4.4",
+    "wrangler": "^3.48.0"
   },
   "dependencies": {
     "fanger": "^0.3.1",
-    "itty-router": "^5.0.4"
+    "itty-router": "^5.0.9"
   }
 }

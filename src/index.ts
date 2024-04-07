@@ -60,5 +60,5 @@ router.all('/', async (request, env, context) => {
 router.all("*", () => new Response("404, not found!", { status: 404 }))
 
 export default {
-	fetch: router.handle
+	fetch: router.fetch
 }
